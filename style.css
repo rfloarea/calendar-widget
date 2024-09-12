@@ -1,3 +1,38 @@
+* {
+  box-sizing: border-box;
+  font-family: monospace;
+  font-size: 1.15rem;
+}
+
 body {
-  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar-container {
+  background: cornflowerblue;
+  width: 450px;
+}
+
+.calendar-container header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+header .calendar-navigation span {
+  cursor: pointer;
+  height: 32px;
+  width: 32px;
+  text-align: center;
+}
+
+.calendar-current-date {
+  font-weight: bold;
+}
+
+.calendar-body ul {
+  list-style: none;
 }
