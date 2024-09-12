@@ -52,3 +52,7 @@ header .calendar-navigation span {
 .calendar-body .calendar-dates li {
   margin-top: 30px;
 }
+
+.calendar-dates li.active {
+  color: aqua;
+}
