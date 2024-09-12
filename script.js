@@ -43,7 +43,7 @@ function genCal() {
   // Generate elements for previous month's dates
   for (let i = dayFirst; i > 0; i--) {
     // console.log(dayFirst);
-    calHTML += `<li>${monthLastDayDate - i + 1}</li>`;
+    calHTML += `<li class="prev-month">${monthLastDayDate - i + 1}</li>`;
   };
 
   // Generate elements for current month's dates
@@ -57,9 +57,9 @@ function genCal() {
     // and if it is the right year
     && year === new Date().getFullYear()
     // then apply a class of "active"
-    ? "active"
+    ? "today"
     // if not, leave class blank
-    : ""
+    : "this-month"
 
     calHTML += `<li class="${isToday}">${i}</li>`;
   };
@@ -67,7 +67,7 @@ function genCal() {
   // Generate elements for next month's dates
   for (let i = dayLast; i < 6; i++) {
     // console.log(i);
-    calHTML += `<li>${i - dayLast + 1}</li>`;
+    calHTML += `<li class="next-month">${i - dayLast + 1}</li>`;
   };
 
   // Set calendar header to correct month and year
