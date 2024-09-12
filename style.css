@@ -53,6 +53,13 @@ header .calendar-navigation span {
   margin-top: 30px;
 }
 
-.calendar-dates li.active {
+.calendar-dates li.today {
   color: aqua;
+}
+
+.calendar-dates li.prev-month {
+  color: rgba(0, 0, 0, 0.389);
+}
+.calendar-dates li.next-month {
+  color: rgba(0, 0, 0, 0.389);
 }
