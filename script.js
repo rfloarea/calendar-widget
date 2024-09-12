@@ -49,7 +49,19 @@ function genCal() {
   // Generate elements for current month's dates
   for (let i = 1; i <= dateLast; i++) {
     // console.log(i);
-    calHTML += `<li>${i}</li>`;
+    // Apply class to the element that is the current date
+    // If today is the the right day of the week
+    let isToday = i === date.getDate()
+    // and if we are in the right month
+    && month === new Date().getMonth()
+    // and if it is the right year
+    && year === new Date().getFullYear()
+    // then apply a class of "active"
+    ? "active"
+    // if not, leave class blank
+    : ""
+
+    calHTML += `<li class="${isToday}">${i}</li>`;
   };
 
   // Generate elements for next month's dates
